@@ -19,6 +19,17 @@ extern_class!(
     }
 );
 
+extern_class!(
+    /// Main-Thread-Only!
+    #[derive(Debug, PartialEq, Eq, Hash)]
+    pub(crate) struct NSPanel;
+
+    unsafe impl ClassType for NSPanel {
+        #[inherits(NSObject)]
+        type Super = NSWindow;
+    }
+);
+
 // Documented as "Main Thread Only", but:
 // > Thread safe in that you can create and manage them on a secondary thread.
 // <https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CocoaFundamentals/AddingBehaviortoaCocoaProgram/AddingBehaviorCocoa.html#//apple_ref/doc/uid/TP40002974-CH5-SW47>

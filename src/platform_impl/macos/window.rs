@@ -49,7 +49,7 @@ use objc2::{declare_class, msg_send, msg_send_id, sel, ClassType};
 use super::appkit::{
     NSApp, NSAppKitVersion, NSAppearance, NSApplicationPresentationOptions, NSBackingStoreType,
     NSColor, NSCursor, NSFilenamesPboardType, NSRequestUserAttentionType, NSResponder, NSScreen,
-    NSView, NSWindow, NSWindowButton, NSWindowLevel, NSWindowSharingType, NSWindowStyleMask,
+    NSView, NSWindow, NSPanel, NSWindowButton, NSWindowLevel, NSWindowSharingType, NSWindowStyleMask,
     NSWindowTitleVisibility,
 };
 
@@ -117,7 +117,7 @@ declare_class!(
 
     unsafe impl ClassType for WinitWindow {
         #[inherits(NSResponder, NSObject)]
-        type Super = NSWindow;
+        type Super = NSPanel;
     }
 
     unsafe impl WinitWindow {

@@ -53,7 +53,7 @@ pub(crate) use self::text_input_context::NSTextInputContext;
 pub(crate) use self::version::NSAppKitVersion;
 pub(crate) use self::view::{NSTrackingRectTag, NSView};
 pub(crate) use self::window::{
-    NSBackingStoreType, NSWindow, NSWindowButton, NSWindowLevel, NSWindowOcclusionState,
+    NSBackingStoreType, NSWindow, NSPanel, NSWindowButton, NSWindowLevel, NSWindowOcclusionState,
     NSWindowOrderingMode, NSWindowSharingType, NSWindowStyleMask, NSWindowTitleVisibility,
 };
 
