@@ -367,6 +367,7 @@ bitflags! {
         const NSUnifiedTitleAndToolbarWindowMask  = 1 << 12;
         const NSFullScreenWindowMask      = 1 << 14;
         const NSFullSizeContentViewWindowMask = 1 << 15;
+        const NSWindowStyleMaskNonactivatingPanel = 1 << 7;
     }
 }
 

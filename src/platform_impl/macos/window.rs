@@ -290,6 +290,8 @@ impl WinitWindow {
                 masks |= NSWindowStyleMask::NSFullSizeContentViewWindowMask;
             }
 
+            masks |= NSWindowStyleMask::NSWindowStyleMaskNonactivatingPanel;
+
             let this: Option<Id<Self, Owned>> = unsafe {
                 msg_send_id![
                     msg_send_id![WinitWindow::class(), alloc],
