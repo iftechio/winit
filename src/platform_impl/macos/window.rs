@@ -127,6 +127,11 @@ declare_class!(
             true
         }
 
+        #[sel(needsPanelToBecomeKey)]
+        fn needs_panel_to_become_key(&self) -> bool {
+            true
+        }
+
         #[sel(canBecomeKeyWindow)]
         fn can_become_key_window(&self) -> bool {
             trace_scope!("canBecomeKeyWindow");
