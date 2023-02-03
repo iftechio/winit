@@ -116,7 +116,7 @@ declare_class!(
     }
 
     unsafe impl ClassType for WinitWindow {
-        #[inherits(NSResponder, NSObject)]
+        #[inherits(NSWindow, NSResponder, NSObject)]
         type Super = NSPanel;
     }
 
@@ -124,11 +124,6 @@ declare_class!(
         #[sel(canBecomeMainWindow)]
         fn can_become_main_window(&self) -> bool {
             trace_scope!("canBecomeMainWindow");
-            true
-        }
-
-        #[sel(needsPanelToBecomeKey)]
-        fn needs_panel_to_become_key(&self) -> bool {
             true
         }
 
